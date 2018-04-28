@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.squareup:javapoet:1.10.0'
+    implementation project(':xiaoliflyknife-annotations')
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
